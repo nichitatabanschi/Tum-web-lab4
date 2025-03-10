@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftRide - Premium Car Rentals</title>
+    <!-- Remove reset.css and add Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Keep some custom styles for sections we're not modifying yet -->
+    <link rel="stylesheet" href="custom-styles.css">
+    
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold">Swift<span class="text-orange-500">Ride</span></a>
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#hero" class="font-medium hover:text-orange-500 transition-colors">Home</a></li>
+                        <li><a href="#about" class="font-medium hover:text-orange-500 transition-colors">About</a></li>
+                        <li><a href="#fleet" class="font-medium hover:text-orange-500 transition-colors">Our Fleet</a></li>
+                        <li><a href="#how-it-works" class="font-medium hover:text-orange-500 transition-colors">How It Works</a></li>
+                        <li><a href="#testimonials" class="font-medium hover:text-orange-500 transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="font-medium hover:text-orange-500 transition-colors">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section (keeping original styling with a few Tailwind classes) -->
+    <section id="hero" class="h-screen flex items-center bg-black bg-opacity-70 bg-blend-overlay text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-xl">
+                <h1 class="text-5xl mb-6">Drive Your Dream Car Today</h1>
+                <p class="text-lg mb-8">Experience the luxury and freedom of driving top-notch vehicles. From economy to luxury, we have the perfect car for every occasion.</p>
+                <a href="#fleet" class="bg-orange-500 hover:bg-orange-600 text-white py-3 px-8 rounded font-bold transition-colors">View Our Fleet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (keeping original styling) -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About SwiftRide</h2>
+                    <p>Founded in 2010, SwiftRide has become the leading car rental service in the region. We pride ourselves on offering a diverse fleet of well-maintained vehicles, exceptional customer service, and competitive rates.</p>
+                    <p>At SwiftRide, we understand that different journeys require different vehicles. Whether you're planning a family vacation, a business trip, or just need a temporary replacement, we have options to suit every need and budget.</p>
+                    <p>Our mission is to make car rentals simple, convenient, and stress-free. We strive to exceed customer expectations by providing reliable vehicles and transparent services.</p>
+                    <a href="#contact" class="btn">Get in Touch</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://media.licdn.com/dms/image/v2/D560BAQH9rYCQ5igv4Q/company-logo_200_200/company-logo_200_200/0/1697310726813?e=2147483647&v=beta&t=pHBwcO82qxa4ed6xfI2dIFf_LEf-vOvNDmcOILGkB_M" alt="SwiftRide team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section (FULLY CONVERTED TO TAILWIND) -->
+    <section id="fleet" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl mb-8 font-semibold text-center">Our Fleet</h2>
+            <p class="text-xl text-center text-gray-600 mb-12">Discover our extensive range of vehicles to suit every need and budget</p>
+            
+            <!-- Grid using Tailwind's grid system -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Economy Car Card -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gray-200 bg-cover bg-center" style="background-image: url('https://holidayexcursion.com/wp-content/uploads/2021/12/economy-class-cars-for-rent-in-alanya-4.webp')"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Economy Class</h3>
+                        <p class="text-orange-500 font-bold mb-4">From $35/day</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Fuel efficient
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Air conditioning
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Bluetooth connectivity
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Unlimited mileage
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded transition-colors">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- SUV Card -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gray-200 bg-cover bg-center" style="background-image: url('https://imgd.aeplcdn.com/600x337/n/cw/ec/42355/xuv700-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80')"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">SUV</h3>
+                        <p class="text-orange-500 font-bold mb-4">From $75/day</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Spacious interior
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                All-wheel drive
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Advanced safety features
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Premium sound system
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded transition-colors">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Luxury Sedan Card -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:-translate-y-2">
+                    <div class="h-48 bg-gray-200 bg-cover bg-center" style="background-image: url('https://www.autoeasy.com/car-image/genesis/g80/2024/hero/front_angle_view.webp')"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Luxury Sedan</h3>
+                        <p class="text-orange-500 font-bold mb-4">From $120/day</p>
+                        <ul class="mb-6 space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Leather interior
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Navigation system
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Premium audio
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-orange-500 mr-2">✓</span>
+                                Concierge service
+                            </li>
+                        </ul>
+                        <a href="#contact" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded transition-colors">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section (keeping original styling) -->
+    <section id="how-it-works" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center">How It Works</h2>
+            <p class="text-center mb-12">Renting a car with SwiftRide is quick and hassle-free</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">🔍</div>
+                    <h3 class="step-title">1. Choose Your Vehicle</h3>
+                    <p>Browse our diverse fleet and select the perfect car for your needs.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">📅</div>
+                    <h3 class="step-title">2. Book Online</h3>
+                    <p>Reserve your vehicle by filling out our simple booking form.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🚗</div>
+                    <h3 class="step-title">3. Pick Up & Go</h3>
+                    <p>Collect your keys at our convenient location and hit the road.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">🔄</div>
+                    <h3 class="step-title">4. Return</h3>
+                    <p>Bring the car back at the end of your rental period. No hidden fees!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (FULLY CONVERTED TO TAILWIND) -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-semibold text-center mb-16">What Our Customers Say</h2>
+            
+            <!-- Flex container for testimonials -->
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- First Testimonial -->
+                <div class="bg-white rounded-xl shadow-lg p-8 max-w-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <p class="text-gray-600 italic mb-6">"I've been renting from SwiftRide for over three years now. Their service is consistent, cars are always in great condition, and the staff is incredibly helpful. Wouldn't go anywhere else!"</p>
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://thumbs.dreamstime.com/b/front-view-beautiful-female-face-perfect-skin-front-view-beautiful-female-face-perfect-skin-over-white-background-143563838.jpg')"></div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Sarah Johnson</h4>
+                            <p class="text-gray-500">Business Traveler</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Testimonial -->
+                <div class="bg-white rounded-xl shadow-lg p-8 max-w-md transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                    <p class="text-gray-600 italic mb-6">"The SUV we rented for our family vacation was perfect! Clean, spacious, and great on gas. The booking process was simple, and pick-up/drop-off was a breeze. Highly recommend!"</p>
+                    <div class="flex items-center">
+                        <div class="w-14 h-14 rounded-full bg-cover bg-center mr-4" style="background-image: url('https://media.istockphoto.com/id/1410538853/photo/young-man-in-the-public-park.jpg?s=612x612&w=0&k=20&c=EtRJGnNOFPJ2HniBSLWKzsL9Xf7GHinHd5y2Tx3da0E=')"></div>
+                        <div>
+                            <h4 class="font-semibold text-lg">David Miller</h4>
+                            <p class="text-gray-500">Family Vacationer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (keeping original styling) -->
+    <section id="contact" class="bg-gray-900 text-white py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>Have questions or ready to book your perfect ride? Reach out to our friendly team.</p>
+                    <p><strong>Address:</strong> 1234 Drive Avenue, Cartown, CT 56789</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                    <p><strong>Email:</strong> info@swiftride.com</p>
+                    <p><strong>Hours:</strong> Monday-Friday 8am-8pm, Weekends 9am-6pm</p>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile-Only Section (with a few Tailwind classes) -->
+    <section id="mobile-special" class="block lg:hidden bg-gray-100 py-10 px-4 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-4">Mobile Booking Made Easy</h2>
+            <p class="mb-8">Book your perfect ride right from your smartphone. Exclusive mobile offers and instant confirmations!</p>
+            <div class="flex flex-col sm:flex-row justify-around">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-4 sm:mb-0">
+                    <span class="text-4xl block mb-4">📱</span>
+                    <h3 class="text-xl font-semibold mb-2">Quick Booking</h3>
+                    <p>30-second reservation process</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <span class="text-4xl block mb-4">🚗</span>
+                    <h3 class="text-xl font-semibold mb-2">Instant Confirmation</h3>
+                    <p>Book now, drive later</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (keeping original styling) -->
+    <footer class="bg-gray-800 text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SwiftRide</h3>
+                    <p>Making car rentals simple and convenient since 2010. Offering a wide range of vehicles to meet every need.</p>
+                    <div class="social-links">
+                        <a href="#">📱</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">👥</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#fleet">Our Fleet</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Short-term Rentals</a></li>
+                        <li><a href="#">Long-term Leasing</a></li>
+                        <li><a href="#">Corporate Fleet Solutions</a></li>
+                        <li><a href="#">Airport Pick-up</a></li>
+                        <li><a href="#">Insurance Options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and special offers.</p>
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email Address" class="form-control" required>
+                        </div>
+                        <button type="submit" class="submit-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SwiftRide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mascot -->
+    <div id="mascot" class="fixed bottom-5 right-5 w-20 h-20 z-50 cursor-pointer transition-transform hover:scale-110">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <path d="M50 120 L150 120 L140 100 Q130 80, 110 80 L90 80 Q70 80, 60 100 Z" fill="#FF5722" />
+            <circle cx="70" cy="130" r="15" fill="#333" />
+            <circle cx="130" cy="130" r="15" fill="#333" />
+            <path d="M90 80 L110 80 L105 60 Q100 50, 95 60 Z" fill="#87CEEB" />
+            <circle cx="80" cy="90" r="5" fill="yellow" />
+            <circle cx="120" cy="90" r="5" fill="yellow" />
+            <circle cx="95" cy="65" r="3" fill="black" />
+            <circle cx="105" cy="65" r="3" fill="black" />
+            <path d="M95 75 Q100 80, 105 75" stroke="black" fill="none" />
+        </svg>
+        <div id="mascot-tooltip" class="hidden absolute bottom-full right-0 bg-white border-2 border-orange-500 rounded-lg p-3 max-w-xs shadow-lg group-hover:block">
+            Need help booking a car? I'm SwiftRide's friendly guide! Click me for quick assistance.
+        </div>
+    </div>
+</body>
+</html>
